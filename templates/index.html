@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Shadow Corp - Cybersecurity Solutions</title>
+    <style>
+        body, html {
+            height: 100%;
+        }
+        .content {
+            flex: 1;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 flex flex-col min-h-screen">
+
+    <!-- Navbar -->
+    <nav class="bg-gray-900 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-white text-2xl font-bold">Shadow Corp</div>
+            <ul class="flex space-x-6">
+                <li><a href="/about" class="text-white hover:text-gray-400">About Us</a></li>
+                <li><a href="/services" class="text-white hover:text-gray-400">Services</a></li>
+                <li><a href="/contact" class="text-white hover:text-gray-400">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="content flex flex-col">
+        <section class="bg-blue-600 text-white py-20">
+            <div class="container mx-auto text-center">
+                <h1 class="text-5xl font-bold mb-4">Cutting-edge Cybersecurity Solutions</h1>
+                <p class="text-xl mb-6">Shadow Corp is a leader in providing world-class security to keep your business safe.</p>
+                <a href="/services" class="bg-white text-blue-600 font-bold py-3 px-6 rounded-full hover:bg-gray-200">
+                    Learn More
+                </a>
+            </div>
+        </section>
+
+        <!-- Coupon/Flag Section -->
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-6">Redeem Your Coupon</h2>
+                <p class="text-lg mb-8">Have you received a special coupon code for our premium services? Apply it below to redeem your free cybersecurity audit.</p>
+                
+                <!-- Display flash messages if any -->
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        <div class="mb-6">
+                            {% for category, message in messages %}
+                                <div class="p-4 mb-4 text-sm text-{{ 'green-500' if category == 'success' else 'red-500' }} bg-gray-200 rounded">
+                                    {{ message }}
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                {% endwith %}
+
+                <!-- Flag submission form disguised as coupon application -->
+                <form action="/" method="POST" class="mb-8">
+                    <label for="coupon" class="block text-lg font-semibold mb-2">Enter Coupon Code</label>
+                    <input type="text" id="coupon" name="flag" class="bg-gray-200 text-gray-800 p-3 rounded w-full mb-4" placeholder="Enter your coupon code here">
+                    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                        Apply Coupon
+                    </button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Shadow Corp. All Rights Reserved.</p>
+            <p>Contact us: <a href="mailto:info@shadowcorp.com" class="text-blue-400 hover:text-blue-600">info@shadowcorp.com</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
+

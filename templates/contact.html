@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Contact Us - Shadow Corp</title>
+</head>
+<body class="bg-gray-100 text-gray-800 flex flex-col min-h-screen">
+
+    <!-- Navbar -->
+    <nav class="bg-gray-900 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-white text-2xl font-bold">Shadow Corp</div>
+            <ul class="flex space-x-6">
+                <li><a href="/" class="text-white hover:text-gray-400">Home</a></li>
+                <li><a href="/about" class="text-white hover:text-gray-400">About Us</a></li>
+                <li><a href="/services" class="text-white hover:text-gray-400">Services</a></li>
+                <li><a href="/contact" class="text-white hover:text-gray-400">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="content flex flex-col">
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto text-center">
+                <h1 class="text-5xl font-bold mb-6">Contact Us</h1>
+                <p class="text-lg mb-8 leading-relaxed">Reach out to Shadow Corp for any inquiries about our services or if you need support.</p>
+
+                <form action="/contact" method="POST" class="max-w-lg mx-auto bg-white p-6 shadow-md rounded-lg">
+                    <div class="mb-4">
+                        <label for="name" class="block text-lg font-semibold mb-2">Your Name</label>
+                        <input type="text" id="name" name="name" class="bg-gray-200 text-gray-800 p-3 rounded w-full" placeholder="Enter your name" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-lg font-semibold mb-2">Your Email</label>
+                        <input type="email" id="email" name="email" class="bg-gray-200 text-gray-800 p-3 rounded w-full" placeholder="Enter your email" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="message" class="block text-lg font-semibold mb-2">Message</label>
+                        <textarea id="message" name="message" class="bg-gray-200 text-gray-800 p-3 rounded w-full" placeholder="Your message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-6 mt-auto">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Shadow Corp. All Rights Reserved.</p>
+            <p>Contact us: <a href="mailto:info@shadowcorp.com" class="text-blue-400 hover:text-blue-600">info@shadowcorp.com</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
+

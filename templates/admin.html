@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Shadow Corp CTF - Admin Panel</title>
+</head>
+<body class="bg-red-900 text-white">
+
+    <div class="flex items-center justify-center h-screen">
+        <div class="text-center">
+            <h1 class="text-5xl font-bold mb-6">Admin Panel Breached</h1>
+            <p class="mb-8 text-lg leading-relaxed">
+                You've done it! The defenses have been bypassed, and you're now inside the elusive admin panel of Shadow Corp.
+                Hidden within the system is a valuable asset. Retrieve it and prove your skills!
+            </p>
+
+            <!-- Leak the flag here -->
+            <div class="bg-gray-800 p-6 rounded shadow-lg mb-8">
+                <h2 class="text-3xl font-semibold mb-4">FLAG:</h2>
+                <p class="text-2xl font-bold text-green-500">{{ flag }}</p>
+            </div>
+
+            <a href="/" class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                Back to Public Interface
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
+
